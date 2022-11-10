@@ -1,0 +1,16 @@
+{
+    "language": "ქართული",
+    "registration": "არ ხართ რეგისტრირებული?",
+    "register": "რეგისტრაცია",
+    "login": "შესვლა",
+    "Email": "ელ-ფოსტა",
+    "Password": "პაროლი",
+    "statisticsTable": {
+        "name_lan": "name.ka",
+        "name": "ქვეყანა",
+        "death": "გარდაცვლილი",
+        "recovered": "გამოჯანმრთელებული",
+        "confirmed": "დადასტურებული",
+        "code": "ქვეყნის კოდი"
+    }
+}

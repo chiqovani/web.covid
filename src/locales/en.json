@@ -1,0 +1,16 @@
+{
+  "language": "english",
+  "registration": "You don't have an account?",
+  "register": "Register",
+  "login": "Login",
+  "Email": "Email address",
+  "Password": "Password",
+  "statisticsTable": {
+      "name_lan": "name.en",
+      "name": "country",
+      "death": "death",
+      "recovered": "recovered",
+      "confirmed": "confirmed",
+      "code": "code"
+  }
+}
