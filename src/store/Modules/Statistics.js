@@ -3,11 +3,15 @@ import Vue from 'vue'
 
 const state = {
     statistics : null,
-    summary: null
+    summary: null,
+    owners: null
 }
 const mutations = {
     setStatistics(state, data) {
         Vue.set(state, 'statistics', data);
+    },
+    setOwners(state, data) {
+        Vue.set(state, 'owners', data);
     },
     setSummary(state, data) {
         Vue.set(state, 'summary', data);
@@ -16,6 +20,9 @@ const mutations = {
 const getters = {
     getStatistics: state => {
         return state.statistics;
+    },
+    getOwners: state => {
+        return state.owners;
     },
     getSummary: state => {
         return state.summary;
@@ -30,6 +37,14 @@ const actions = {
                 })
         })
     },
+    getOwnersAction({commit, dispatch}, data) {
+        return new Promise((resolve, reject) => {
+            axios({url: process.env.VUE_APP_API_URL + '/api/owners', method: 'GET'})
+                .then(resp => {
+                    commit('setOwners', resp.data)
+                })
+        })
+    },
     getSummaryAction({commit, dispatch}, data) {
         return new Promise((resolve, reject) => {
             axios({url: process.env.VUE_APP_API_URL + '/api/summary', method: 'GET'})
@@ -37,7 +52,7 @@ const actions = {
                     commit('setSummary', resp.data.data)
                 })
         })
-    }
+    },
 }
 
 
